@@ -12,32 +12,46 @@ let bgColor = "#611818";
 </script>
 
 <template>
-    <div class="relative isolate overflow-hidden min-h-screen min-w-screen">
+    <div
+        class="relative isolate overflow-hidden min-h-screen min-w-screen flex flex-col"
+    >
         <img
             :src="bgImage"
-            alt=""
-            class="absolute inset-0 -z-10 h-full w-full object-cover"
+            alt="background image of a forest withe the sun shining through the trees"
+            class="md:absolute -z-10 scale-150 md:transform-none md:h-full w-full object-scale-down md:object-cover inset-0"
         />
         <div
-            class="max-w-sm bg-[#611818] min-h-screen flex flex-col justify-end"
+            class="md:max-w-sm bg-[#611818] md:min-h-screen flex flex-col md:justify-end grow"
         >
-            <div class="ml-36 w-screen font-serif overflow-visible">
-                <div id="modal"></div>
-                <h1 class="text-9xl font-bold text-white">Explore</h1>
-                <div class="flex items-center">
-                    <button
-                        type="button"
-                        @click="isModalOpen = true"
-                        class="inline-flex items-center gap-x-5 text-xl text-white  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            <div
+                class="mx-4 mt-12 md:ml-36 md:w-screen font-serif md:overflow-visible"
+            >
+                <div class="flex flex-col gap-y-8 md:gap-y-1">
+                    <div id="modal"></div>
+                    <h1
+                        class="text-7xl md:text-9xl font-bold text-white text-center md:text-left"
                     >
-                        <PlusIcon class="w-10 h-10" />
-                        More Details
-                    </button>
+                        Explore
+                    </h1>
+                    <div
+                        class="flex justify-center items-center md:justify-start"
+                    >
+                        <button
+                            type="button"
+                            @click="isModalOpen = true"
+                            class="inline-flex items-center p-3 gap-x-2 md:gap-x-5 rounded-full md:rounded-none text-xl text-[#611818] md:text-white bg-white md:bg-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                        >
+                            <PlusIcon
+                                class="w-10 h-10 bg-[#611818] rounded-full p-0.5"
+                            />
+                            More Details
+                        </button>
+                    </div>
                 </div>
                 <div
-                    class="mt-16 mb-6 mr-36 flex flex-row justify-end max-w-full"
+                    class="mt-16 mb-6 md:mr-36 flex justify-center md:justify-end"
                 >
-                    <div class="flex flex-col gap-y-4 mr-4">
+                    <div class="flex md:flex-col gap-x-6 md:gap-y-4 md:mr-6">
                         <FacebookIcon class="w-16 h-16 text-white" />
                         <InstagramIcon class="w-16 h-16 text-white" />
                     </div>
@@ -46,7 +60,10 @@ let bgColor = "#611818";
         </div>
     </div>
     <Teleport to="#modal">
-        <div v-if="isModalOpen" class="">
+        <div
+            v-if="isModalOpen"
+            class="text-center fixed z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-60 bg-white p-4 m-4"
+        >
             <div ref="modal">
                 <button @click="isModalOpen = false">Close</button>
                 This is the Modal!

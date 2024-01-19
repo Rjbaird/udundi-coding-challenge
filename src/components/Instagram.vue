@@ -7,8 +7,6 @@ export default {
 <template>
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="73"
-        height="74"
         viewBox="0 0 73 74"
     >
         <g>
