@@ -1,7 +1,10 @@
-# Vue 3 + Vite
+# Udundi Coding Challenge
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Simple Vue.js app w/ TailwindCSS. Bundled with Vite and formatted with Prettier.
 
-## Recommended IDE Setup
+Live demo: [https://rjbaird.github.io/udundi-coding-challenge/](https://rjbaird.github.io/udundi-coding-challenge/)
 
--   [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+![Vue.js](https://img.shields.io/npm/v/vue?color=4FC08D&label=Vue.js&logo=Vue.js&style=for-the-badge)
+![TailwindCSS](https://img.shields.io/npm/v/tailwindcss?color=38B2AC&label=TailwindCSS&logo=Tailwind%20CSS&style=for-the-badge)
+![Prettier](https://img.shields.io/npm/v/prettier?color=F7B93E&label=Prettier&logo=Prettier&style=for-the-badge)
+![Vite](https://img.shields.io/npm/v/vite?color=646CFF&label=Vite&logo=Vite&style=for-the-badge)

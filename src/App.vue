@@ -19,20 +19,20 @@ const bgImage = new URL("./assets/background.webp", import.meta.url).href;
 
 <template>
   <div
-    class="relative isolate overflow-hidden min-h-screen w-auto flex flex-col font-display"
+    class="relative isolate flex min-h-screen w-auto flex-col overflow-hidden font-display"
   >
     <img
       :src="bgImage"
       alt="background image of a forest withe the sun shining through the trees"
-      class="md:absolute -z-10 scale-150 md:transform-none md:h-full w-full object-scale-down md:object-cover inset-0"
+      class="inset-0 -z-10 w-full scale-150 object-scale-down md:absolute md:h-full md:transform-none md:object-cover"
     />
 
     <div id="modal"></div>
     <div
-      class="md:max-w-sm bg-[#611818] md:min-h-screen flex flex-col md:justify-end grow"
+      class="flex grow flex-col bg-[#611818] md:min-h-screen md:max-w-sm md:justify-end"
     >
       <div
-        class="mx-4 mt-12 md:ml-36 md:w-screen font-serif md:overflow-visible"
+        class="font-serif mx-4 mt-12 md:ml-36 md:w-screen md:overflow-visible"
       >
         <div class="flex flex-col gap-y-8 md:gap-y-1">
           <Transition
@@ -43,26 +43,26 @@ const bgImage = new URL("./assets/background.webp", import.meta.url).href;
           >
             <h1
               v-show="loaded"
-              class="text-7xl md:text-9xl font-bold text-white text-center md:text-left"
+              class="text-center text-7xl font-bold text-white md:text-left md:text-9xl"
             >
               Explore
             </h1>
           </Transition>
-          <div class="flex justify-center items-center md:justify-start">
+          <div class="flex items-center justify-center md:justify-start">
             <button
               type="button"
               @click="isModalOpen = true"
-              class="inline-flex items-center p-3 gap-x-2 md:gap-x-5 text-xl text-white md:bg-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              class="inline-flex items-center gap-x-2 p-3 text-xl text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:gap-x-5 md:bg-transparent"
             >
-              <PlusIcon class="w-10 h-10 bg-[#611818] rounded-full p-0.5" />
+              <PlusIcon class="h-10 w-10 rounded-full bg-[#611818] p-0.5" />
               More Details
             </button>
           </div>
         </div>
-        <div class="mt-16 mb-6 md:mr-36 flex justify-center md:justify-end">
-          <div class="flex md:flex-col gap-x-6 md:gap-y-4 md:mr-6">
-            <FacebookIcon class="w-16 h-16 text-white" />
-            <InstagramIcon class="w-16 h-16 text-white" />
+        <div class="mb-6 mt-16 flex justify-center md:mr-36 md:justify-end">
+          <div class="flex gap-x-6 md:mr-6 md:flex-col md:gap-y-4">
+            <FacebookIcon class="h-16 w-16 text-white" />
+            <InstagramIcon class="h-16 w-16 text-white" />
           </div>
         </div>
       </div>
@@ -80,15 +80,15 @@ const bgImage = new URL("./assets/background.webp", import.meta.url).href;
     >
       <div
         v-if="isModalOpen"
-        class="fixed z-50 max-w-full h-fit max-h-fit bg-white px-4 md:px-12 pt-2 pb-24 mx-2 md:my-48 md:ml-36 md:w-7/12 lg:w-5/12"
+        class="fixed z-50 mx-2 h-fit max-h-fit max-w-full bg-white px-4 pb-24 pt-2 md:my-48 md:ml-36 md:w-7/12 md:px-12 lg:w-5/12"
       >
         <div ref="modal" class="flex justify-end">
           <button @click="isModalOpen = false" class="text-3xl text-[#611818]">
             x
           </button>
         </div>
-        <div class="flex flex-col gap-y-4 md:gap-y-8 pt-2 md:pt-8">
-          <h3 class="text-6xl md:text-7xl text-[#611818]">Explore</h3>
+        <div class="flex flex-col gap-y-4 pt-2 md:gap-y-8 md:pt-8">
+          <h3 class="text-6xl text-[#611818] md:text-7xl">Explore</h3>
           <p class="text-xs md:text-sm">
             We must be quiet, soft and gentle. The man who does the best job is
             the one who is happy at his job. These little son of a guns hide in
@@ -105,7 +105,7 @@ const bgImage = new URL("./assets/background.webp", import.meta.url).href;
             beautiful out of it.
           </p>
           <button
-            class="px-12 py-4 bg-gradient-to-r from-[#611818] to-[#9F6452] uppercase font-semibold text-white w-fit"
+            class="w-fit bg-gradient-to-r from-[#611818] to-[#9F6452] px-12 py-4 font-semibold uppercase text-white"
           >
             Read More
           </button>
