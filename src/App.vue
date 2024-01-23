@@ -19,7 +19,7 @@ const bgImage = new URL("./assets/background.webp", import.meta.url).href;
 
 <template>
   <div
-    class="relative isolate overflow-hidden min-h-screen w-auto flex flex-col"
+    class="relative isolate overflow-hidden min-h-screen w-auto flex flex-col font-display"
   >
     <img
       :src="bgImage"
@@ -39,7 +39,7 @@ const bgImage = new URL("./assets/background.webp", import.meta.url).href;
             name="fade"
             enter-from-class="opacity-0"
             enter-to-class="opacity-100"
-            enter-active-class="transition ease-out duration-1500"
+            enter-active-class="transition ease-out duration-1000"
           >
             <h1
               v-show="loaded"
@@ -52,7 +52,7 @@ const bgImage = new URL("./assets/background.webp", import.meta.url).href;
             <button
               type="button"
               @click="isModalOpen = true"
-              class="inline-flex items-center p-3 gap-x-2 md:gap-x-5 rounded-full md:rounded-none text-xl text-[#611818] md:text-white bg-white md:bg-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              class="inline-flex items-center p-3 gap-x-2 md:gap-x-5 text-xl text-white md:bg-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               <PlusIcon class="w-10 h-10 bg-[#611818] rounded-full p-0.5" />
               More Details
